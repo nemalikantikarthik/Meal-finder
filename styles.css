@@ -1,4 +1,6 @@
 body {
+    margin: 0px;
+    padding: 0px;
     font-family: Arial,
         sans-serif;
 }
@@ -7,9 +9,12 @@ header {
     background: #e85d04;
     color: white;
     padding: 5px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;   
 }
 
 #hero {
-    text-align: center;
-    margin: 2em 0;
+    
+
 }
