@@ -7,13 +7,19 @@
 </head>
 <body>
   <header>
-    <h1 id="meal-category-title"></h1>
-    <a href="index.html">← Back to Categories</a>
-  </header>
+        <h1 id="meal-category-title"></h1>
+        <a href="index.html">← Back to Categories</a>
+        <button id="hamburgerBtn" class="hamburger">&equiv;</button>
+        <nav id="sidebar" class="hidden">
+            <button id="closeSidebarBtn" class="close-btn" style="display:none;">&#10006;</button>
+            <ul id="category-list"></ul>
+        </nav>
+        </header>
   <main>
     <div id="meals-list"></div>
     <p id="no-results" class="hidden">No meals found.</p>
   </main>
   <script src="meals.js"></script>
+  <script src="common.js"></script>
 </body>
 </html>

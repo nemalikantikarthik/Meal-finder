@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Meal Details</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1 id="meal-title"></h1>
+        <a href="javascript:history.back()">← Back</a>
+        <button id="hamburgerBtn" class="hamburger">&equiv;</button>
+        <nav id="sidebar" class="hidden">
+            <button id="closeSidebarBtn" class="close-btn" style="display:none;">&#10006;</button>
+            <ul id="category-list"></ul>
+        </nav>
+    </header>
+    <main>
+        <div id="meal-info"></div>
+        <p id="no-meal" class="hidden">Meal details not found.</p>
+    </main>
+    <script src="common.js"></script>
+    <script src="meal-details.js"></script>
+</body>
+</html>
