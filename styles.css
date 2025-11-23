@@ -79,6 +79,12 @@ header a {
 #searchBtn:hover{
     background: #f38841;
 }
+.personalize {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1em;
+  margin-top: 0.4em;
+}
 nav#sidebar {
   position: fixed;
   top: 0;
@@ -166,17 +172,123 @@ section h3,.category-title {
   font-size: 1.05em;
   font-weight: 600;
 }
-.category-card[data-type]::after,
-.meal-card[data-type]::after {
-  content: attr(data-type);
-  position: absolute;
-  top: 1em;
-  right: 1em;
-  background: #ee702e;
-  color: #fff;
-  padding: 0.2em 0.7em;
+#meals-list {
+  margin-top: 0.6em;
+}
+#no-results, #no-meal {
+  text-align: center;
+  color: #ee702e;
+  font-weight: bold;
+  font-size: 1.15em;
+  margin-top: 2em;
+  display: none;
+}
+#meal-info {
+  background: #fff;
   border-radius: 12px;
-  font-size: 0.86em;
+  box-shadow: 0 2px 10px rgba(120,50,20,0.08);
+  margin: 2em auto;
+  padding: 2em;
+  max-width: 650px;
+}
+#meal-info img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 8px;
+  margin: 0 auto 1em auto;
+  display: block;
+}
+#meal-info h2 {
+  margin: 1.2em 0 0.6em 0;
+  color: #ee702e;
+  font-size: 1.13em;
   font-weight: bold;
   letter-spacing: 1px;
 }
+#meal-info ul {
+  list-style: none;
+  padding-left: 0;
+}
+#meal-info li {
+  padding: 0.32em 0;
+  font-size: 1em;
+  color: #222;
+  border-bottom: 1px dashed #f1d6c3;
+}
+#meal-info p {
+  background: #fdf4ed;
+  border-radius: 7px;
+  padding: 1.2em;
+  font-size: 1.01em;
+  color: #2a2a2a;
+  margin-top: 1.3em;
+  line-height: 1.68;
+}
+/* Links & Back Buttons */
+a {
+  color: #ee702e;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.18s;
+}
+a:hover {
+  color: #b35418;
+}
+header a {
+  color: #fff;
+  font-weight: 500;
+  background: none;
+  margin-left: 1.7em;
+  font-size: 1.03em;
+}
+/* Responsive Design */
+@media (max-width: 900px) {
+  header, .main, #meal-info {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  #categories, #meals-list {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+@media (max-width: 700px) {
+  #hero {
+    padding: 2em 0.3em 1em 0.3em;
+    min-height: 160px;
+    background-size: cover;
+  }
+  #categories, #meals-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  #meal-info {
+    padding: 1em;
+  }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em 0.7em;
+  }
+}
+@media (max-width: 480px) {
+  #searchBox {
+    width: 180px;
+    font-size: 1em;
+  }
+  .category-card, .meal-card {
+    padding: 0.8em;
+  }
+  #categories, #meals-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Misc. UI */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #f7f7f7;
+}
+::-webkit-scrollbar-thumb {
+  background: #e7e7e7;
+  border-radius: 16px;
+}
+
